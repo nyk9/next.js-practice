@@ -12,10 +12,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const handlerSearch = useDebouncedCallback((term: string) => {
     console.log(`Searching ... ${term}`);
     const params = new URLSearchParams(searchParams);
-<<<<<<< HEAD
-=======
     params.set('page', '1');
->>>>>>> f2c7aad (feat(invoices): チャプター11の内容をコミット)
     if (term) {
       params.set('query', term);
     } else {

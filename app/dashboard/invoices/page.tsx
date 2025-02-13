@@ -4,11 +4,9 @@ import { CreateInvoice } from '@/app/ui/invoices/buttons';
 import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
-<<<<<<< HEAD
-=======
 import { fetchInvoicesPages } from '@/app/lib/data';
 import Pagination from '@/app/ui/invoices/pagination';
->>>>>>> f2c7aad (feat(invoices): チャプター11の内容をコミット)
+
 
 export default async function Page( props: {
   searchParams?: Promise<{
@@ -19,10 +17,8 @@ export default async function Page( props: {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
-<<<<<<< HEAD
-=======
   const totalPages = await fetchInvoicesPages(query);
->>>>>>> f2c7aad (feat(invoices): チャプター11の内容をコミット)
+
 
   return (
     <div className="w-full">
@@ -37,11 +33,7 @@ export default async function Page( props: {
         <Table query={query} currentPage={currentPage} />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">
-<<<<<<< HEAD
-        {/* <Pagination totalPages={totalPages} /> */}
-=======
         <Pagination totalPages={totalPages} />
->>>>>>> f2c7aad (feat(invoices): チャプター11の内容をコミット)
       </div>
     </div>
   );
