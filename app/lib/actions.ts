@@ -63,6 +63,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
       `;
   } catch (error) {
     // If a database error occurs, return a more specific error.
+    console.error(error);
     return {
       message: "Database Error: Failed to Create Invoice.",
     };
