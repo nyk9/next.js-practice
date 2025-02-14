@@ -14,7 +14,8 @@ export function CreateInvoice() {
   );
 }
 
-export function UpdateInvoice() {
+export function UpdateInvoice(id: {id: string}) {
+  console.log(id);
   return (
     <Link
       href="/dashboard/invoices"
